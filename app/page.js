@@ -1,101 +1,76 @@
-import Image from "next/image";
+import Image from 'next/image';
+import './globals.css';
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+<main className='flex flex-col justify-center items-center min-h-screen w-full md:w-9/12 mx-auto p-5'>
+    <div className='relative w-full h-[25vh] md:h-[25vh] overflow-hidden'>
+      <Image 
+        src='/image-omelette.jpeg' 
+        className='object-cover w-full h-full rounded-2xl' 
+        alt='omelette' 
+        layout='fill'
+        quality={100}
+      />
     </div>
+
+      <div class='p-5'>
+      <h1 class='font-customNormal text-3xl font-mediumbold'>Simple Omelette Recipe</h1>
+      <h2 class='text-lg font-light mt-2 mb-4'>An easy and quick dish, perfect for any meal. This classic omelette combines beaten eggs cooked to perfection, optionally filled with your choice of cheese, vegetables, or meats.</h2>
+      <div class='flex flex-col justify-center items-center bg-purple-100 py-5 md:flex-col md:items-start md:px-10'>
+        <h1 class='font-customNormal text-customPurple font-bold mb-2'>Preparation time</h1>
+        <ul class='list-disc'>
+          <li class='mb-1'><span class='font-customNormal font-bold'>Total:</span> Approximately 10 minutes</li>
+          <li class='mb-1'><span class='font-customNormal font-bold'>Preparation:</span> 5 minutes</li>
+          <li class='mb-1'><span class='font-customNormal font-bold'>Cooking:</span> 5 minutes</li>
+        </ul>
+      </div>
+      <div class='flex flex-col justify-center p-3'>
+      <h1 class='font-customNormal text-customPurple font-bold text-xl mb-2 mt-1'>Ingredients</h1>
+      <ul class='list-disc'>
+       <li class='mb-1'>2-3 large eggs</li>
+       <li class='mb-1'>Salt, to taste</li>
+       <li class='mb-1'>Pepper, to taste</li>
+       <li class='mb-1'>1 tablespoon of butter or oil</li>
+       <li class='mb-1'>Optional fillings: cheese, diced vegetables, cooked meats, herbs</li>
+      </ul>
+      </div>
+      <hr class='mt-5 mb-5'/>
+      <section class='flex flex-col justify-center'>
+       <h1 class='font-customNormal text-customPurple font-bold text-2xl mb-2'>Instructions</h1>
+       <ol class='list-decimal '>
+        <li><span class='font-customNormal font-bold'>Beat the eggs:</span> In a bowl, beat the eggs with a pinch of salt and pepper until they are well mixed. You can add a tablespoon of water or milk for a fluffier texture.</li>
+        <li class='mt-2'><span class='font-customNormal font-bold'>Heat the pan:</span> Place a non-stick frying pan over medium heat and add butter or oil. </li>
+        <li class='mt-2'><span class='font-customNormal font-bold'>Cook the omelette:</span> Once the butter is melted and bubbling, pour in the eggs. Tilt the pan to ensure the eggs evenly coat the surface.</li>
+        <li class='mt-2'><span class='font-customNormal font-bold'>Add fillings (optional):</span> When the eggs begin to set at the edges but are still slightly runny in the middle, sprinkle your chosen fillings over one half of the omelette.</li>
+        <li class='mt-2'><span class='font-customNormal font-bold'>Fold and serve:</span> As the omelette continues to cook, carefully lift one edge and fold it over the fillings. Let it cook for another minute, then slide it onto a plate.</li>
+        <li class='mt-2'><span class='font-customNormal font-bold'>Enjoy:</span> Serve hot, with additional salt and pepper if needed.</li>
+       </ol>
+      </section>
+      <hr class='mt-5 mb-5'/>
+      <h1 class='font-customNormal text-customPurple font-bold text-2xl mb-2'>Nutrition</h1>
+      <h2 class='text-lg font-light'>The table below shows nutritional values per serving without the additional fillings.</h2>
+      <div class='flex justify-between mb-2 px-10 mt-3'>
+        <h1>Calories</h1>
+        <h2 class='font-customNormal text-customPurple font-bold'>277kcal</h2>
+      </div>
+      <hr/>
+      <div class='flex justify-between mb-2 px-10'>
+        <h1>Carbs</h1>
+        <h2 class='font-customNormal text-customPurple font-bold'>0g</h2>
+      </div>
+      <hr/>
+      <div class='flex justify-between mb-2 px-10'>
+        <h1>Protein</h1>
+        <h2 class='font-customNormal text-customPurple font-bold'>20g</h2>
+      </div>
+      <hr/>
+      <div class='flex justify-between mb-2 px-10'>
+        <h1>Fat</h1>
+        <h2 class='font-customNormal text-customPurple font-bold'>22g</h2>
+      </div>
+    </div>
+    </main>
+
   );
 }
