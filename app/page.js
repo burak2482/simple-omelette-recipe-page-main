@@ -1,16 +1,14 @@
-import Image from 'next/image';
 import './globals.css';
 
 export default function Home() {
   return (
 <main className='flex flex-col justify-center items-center min-h-screen w-full md:w-9/12 mx-auto p-5'>
     <div className='relative w-full h-[25vh] md:h-[25vh] overflow-hidden'>
-      <Image 
+      <img
         src='image-omelette.jpeg' 
         className='object-cover w-full h-full rounded-2xl' 
         alt='omelette' 
         layout='fill'
-        quality={100}
       />
     </div>
 
